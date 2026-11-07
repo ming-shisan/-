@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    叠加计算：如果是复合选择器，则需要权重叠加计算。
+
+公式：（每一级之间不存在进位）
+
+（行内样式，id选择器个数，类选择器个数，标签选择器个数）
+
+规则：
+- 从左向右依次比较选个数，同一级个数多的优先级高，如果个数相同，则向后比较
+- !important 权重最高
+- 继承权重最低
+</body>
+</html>

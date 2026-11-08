@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易新闻卡片</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .card {
+            margin: auto;
+            width: 300px;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+        .card img{
+            width: 250px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .card h3{
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 12px;
+            text-align: left;
+        }
+        .card h3::before {
+            content:"" ;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 18px;
+            background-color: red;
+            
+        }
+        .card p{
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            text-indent: 2em;
+            margin-bottom: 10px;
+        }
+        .card a {
+            display: block;
+            font-size: 13px;
+            color: #de2626;
+            text-decoration: none;
+            text-align: right;
+
+        }
+        .card a:hover {
+            text-decoration: underline;
+            color: #b01e1e;
+        }
+        .card p:nth-child(3) {
+            border-bottom: 2px solid #ffd700;
+
+        }
+         body {
+            background-color: #f1f1f1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://picsum.photos/300/200" alt="新闻图片">
+        <h3>人工智能改变未来生活</h3>
+        <p>人工智能融入衣食住行，赋能医疗与教育，以科技之力，打造便捷温暖的未来新生活。</p>
+        <a href="https://baike.baidu.com/item/%E4%BA%BE5%B7%A5%E6%99%BA%E8%83%BD/9180" target="_blank">阅读全文</a>
+    </div>
+</body>
+</html>

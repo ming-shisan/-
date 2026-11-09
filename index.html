@@ -3,34 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>我的学习记录</title>
+<title>我的前端学习笔记</title>
 <style>
-  body{margin:0;font-family:-apple-system,"Microsoft YaHei",sans-serif;
-       background:#f6f7fb;color:#222;}
-  .wrap{max-width:720px;margin:0 auto;padding:48px 20px;}
-  h1{font-size:26px;margin:0 0 6px;}
-  .sub{color:#888;font-size:14px;margin-bottom:32px;}
-  ul{list-style:none;padding:0;margin:0;}
-  li{margin-bottom:14px;}
-  a{display:block;padding:16px 20px;background:#fff;border-radius:12px;
-    text-decoration:none;color:#222;font-size:16px;
-    box-shadow:0 1px 4px rgba(0,0,0,.06);
-    transition:.2s;}
-  a:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.10);}
-  .num{color:#4c6fff;font-weight:600;margin-right:10px;}
-</style>
-</head>
+body{font-family:"Microsoft YaHei",sans-serif;max-width:900px;margin:0 auto;padding:32px 20px;color:#222;background:#f7f8fa;}
+header{text-align:center;margin-bottom:28px;}
+h1{font-size:28px;margin:0 0 10px;}
+p.sub{color:#666;margin:0;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;}
+.card{background:#fff;border:1px solid #eaecef;border-radius:12px;padding:18px 20px;transition:box-shadow .2s;}
+.card:hover{box-shadow:0 4px 14px rgba(0,0,0,.08);}
+.card a{color:#0366d6;text-decoration:none;font-size:16px;font-weight:600;}
+.card small{display:block;margin-top:6px;color:#888;font-weight:normal;}
+</style></head>
 <body>
-<div class="wrap">
-  <h1>我的学习记录</h1>
-  <p class="sub">ming-shisan.github.io</p>
-
-  <ul>
-    <li><a href="day1/"><span class="num">01</span>第一天</a></li>
-    <li><a href="day2/"><span class="num">02</span>第二天</a></li>
-    <li><a href="day3/"><span class="num">03</span>第三天</a></li>
-    <li><a href="practice/"><span class="num">04</span>实战题目</a></li>
-  </ul>
+<header>
+<h1>📚 我的前端学习笔记</h1>
+<p class="sub">HTML / CSS 课程练习目录 · 共 123 个页面</p>
+</header>
+<div class="grid">
+<div class='card'><a href='%E7%AC%AC%E4%B8%80%E5%A4%A9/index.html'>第一天 · HTML 基础</a><small>15 个页面</small></div>
+<div class='card'><a href='%E7%AC%AC%E4%BA%8C%E5%A4%A9/index.html'>第二天 · 列表 / 表格 / 表单</a><small>18 个页面</small></div>
+<div class='card'><a href='%E7%AC%AC%E4%B8%89%E5%A4%A9/index.html'>第三天 · CSS 基础与文本样式</a><small>20 个页面</small></div>
+<div class='card'><a href='%E7%AC%AC%E5%9B%9B%E5%A4%A9/index.html'>第四天 · 选择器 / 背景 / 显示模式</a><small>19 个页面</small></div>
+<div class='card'><a href='%E7%AC%AC%E4%BA%94%E5%A4%A9/index.html'>第五天 · 伪类与盒子模型</a><small>18 个页面</small></div>
+<div class='card'><a href='%E7%AC%AC%E5%85%AD%E5%A4%A9/index.html'>第六天 · 浮动与弹性布局</a><small>15 个页面</small></div>
+<div class='card'><a href='%E7%AC%AC%E4%B8%83%E5%A4%A9/index.html'>第七天 · 学成在线综合案例</a><small>1 个页面</small></div>
+<div class='card'><a href='%E7%AC%AC%E5%85%AB%E5%A4%A9/index.html'>第八天 · 定位</a><small>4 个页面</small></div>
+<div class='card'><a href='%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84/index.html'>相对路径练习</a><small>2 个页面</small></div>
+<div class='card'><a href='%E5%AE%9E%E6%88%98%E9%A2%98%E7%9B%AE/index.html'>实战题目</a><small>1 个页面</small></div>
+<div class='card'><a href='%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B%E6%96%B0%E9%97%BB/index.html'>综合案例新闻</a><small>9 个页面</small></div>
+<div class='card'><a href='%E6%96%B0/index.html'>其他练习</a><small>1 个页面</small></div>
 </div>
 </body>
 </html>

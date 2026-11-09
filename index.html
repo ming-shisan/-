@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>我的学习笔记</title>
-    <style>
-        body{font-family:微软雅黑;max-width:800px;margin:30px auto;padding:0 20px;}
-        a{display:block;margin:10px 0;color:#0366d6;text-decoration:none;}
-        a:hover{text-decoration:underline;}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的学习记录</title>
+<style>
+  body{margin:0;font-family:-apple-system,"Microsoft YaHei",sans-serif;
+       background:#f6f7fb;color:#222;}
+  .wrap{max-width:720px;margin:0 auto;padding:48px 20px;}
+  h1{font-size:26px;margin:0 0 6px;}
+  .sub{color:#888;font-size:14px;margin-bottom:32px;}
+  ul{list-style:none;padding:0;margin:0;}
+  li{margin-bottom:14px;}
+  a{display:block;padding:16px 20px;background:#fff;border-radius:12px;
+    text-decoration:none;color:#222;font-size:16px;
+    box-shadow:0 1px 4px rgba(0,0,0,.06);
+    transition:.2s;}
+  a:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.10);}
+  .num{color:#4c6fff;font-weight:600;margin-right:10px;}
+</style>
 </head>
 <body>
-    <h1>📚 我的学习笔记仓库</h1>
-    <p>HTML/CSS 前端练习</p>
-    <hr>
-    <h3>目录</h3>
-    <a href="第一天/">👉 第一天</a>
-    <a href="第二天/">👉 第二天</a>
-    <a href="第三天/">👉 第三天</a>
-    <a href="第四天/">👉 第四天</a>
-    <a href="第五天/">👉 第五天</a>
-    <a href="第六天/">👉 第六天</a>
-    <a href="第七天/学成在线/">👉 第七天 学成在线</a>
-    <a href="第八天/">👉 第八天</a>
-    <a href="实战题目/">👉 实战题目</a>
-    <a href="相对路径/">👉 相对路径</a>
-    <a href="综合案例新闻/">👉 综合案例新闻</a>
+<div class="wrap">
+  <h1>我的学习记录</h1>
+  <p class="sub">ming-shisan.github.io</p>
+
+  <ul>
+    <li><a href="day1/"><span class="num">01</span>第一天</a></li>
+    <li><a href="day2/"><span class="num">02</span>第二天</a></li>
+    <li><a href="day3/"><span class="num">03</span>第三天</a></li>
+    <li><a href="practice/"><span class="num">04</span>实战题目</a></li>
+  </ul>
+</div>
 </body>
 </html>

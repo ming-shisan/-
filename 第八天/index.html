@@ -3,18 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>第八天 · 定位</title>
+<title>第八天 · 定位与布局</title>
 <style>
 body{font-family:"Microsoft YaHei",sans-serif;max-width:860px;margin:32px auto;padding:0 20px;color:#222;background:#f7f8fa;}
 h1{font-size:24px;} .back{display:inline-block;margin-bottom:18px;color:#0366d6;text-decoration:none;}
+.hint{color:#666;font-size:14px;margin-bottom:18px;}
 ul{list-style:none;padding:0;} li{margin:8px 0;}
 a{color:#0366d6;text-decoration:none;line-height:1.6;} a:hover{text-decoration:underline;}
+.sub{margin-top:26px;font-size:14px;}
 </style></head>
 <body><a class='back' href='../index.html'>← 返回首页</a>
-<h1>第八天 · 定位</h1><ul>
-<li><a href='1-%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D.html'>1-相对定位.html</a></li>
-<li><a href='2-%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D.html'>2-绝对定位.html</a></li>
-<li><a href='3-%E5%B1%85%E4%B8%AD.html'>3-居中.html</a></li>
-<li><a href='4-%E5%9B%BA%E5%AE%9A%E5%AE%9A%E4%BD%8D.html'>4-固定定位.html</a></li>
-</ul>
+<h1>第八天 · 定位与布局</h1>
+<p class="hint">列表会自动读取仓库里这一天的文件，新上传的页面刷新一下就会出现。</p>
+<ul id="list"></ul>
+<p class="sub"><a href='iconfont/demo_index.html'>图标库 iconfont 示例</a></p>
+<script>
+(function(){
+  var fallback = ['1-相对定位.html','2-绝对定位.html','3-居中.html','4-固定定位.html','5-堆叠顺序.html','6-CSS精灵-基本使用.html','7-京东服务.html','8-字体图标.html','9-垂直对齐方式.html','10-过渡.html','11-透明度.html','12-光标类型cursor.html'];
+  function num(n){ var m = n.match(/^(\d+)/); return m ? +m[1] : 9999; }
+  function render(list){
+    var ul = document.getElementById('list');
+    ul.innerHTML = '';
+    list.forEach(function(n){
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = encodeURI(n);
+      a.textContent = n;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+  }
+  render(fallback);
+  fetch('https://api.github.com/repos/ming-shisan/-/contents/' + encodeURI('第八天')).then(function(r){
+    if(!r.ok) throw new Error('http ' + r.status);
+    return r.json();
+  }).then(function(items){
+    var files = items.filter(function(i){ return i.type === 'file' && /\.html$/.test(i.name) && i.name !== 'index.html'; }).map(function(i){ return i.name; });
+    files.sort(function(a,b){ return num(a) - num(b) || a.localeCompare(b, 'zh'); });
+    if (files.length) render(files);
+  }).catch(function(){});
+})();
+</script>
 </body></html>
